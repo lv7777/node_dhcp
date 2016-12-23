@@ -18,3 +18,12 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
 
     dhcpServer.close()
 })
+
+dhcpServer.on("error",(err)=>{
+    console.warn("error!!!!"+ err)
+})
+
+dhcpServer.on("listening",(obj)=>{
+    const info=dhcpServer.address()
+    console.info("server listening in "+info.address + " and "+info.port+" port\n")
+})
