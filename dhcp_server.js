@@ -15,6 +15,12 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
 
     var msg=util.parseDHCP(msgbuffer)
     console.log(msg.opcode)
+    console.log( msg.mac)
+
+    //DHCP packetかどうか
+    util.isDHCP(msgbuffer)
+    //DHCP discoverかどうか
+    
 
     dhcpServer.close()
 })
