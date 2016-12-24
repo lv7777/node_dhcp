@@ -14,8 +14,8 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
     console.log("\n"+typeof msgbuffer)
 
     var msg=util.parseDHCP(msgbuffer)
-    console.log(msg.opcode)
-    console.log( msg.mac)
+    //console.log(msg.opcode)
+    //console.log( msg.mac)
 
     //DHCP packetかどうか
     util.isDHCP(msgbuffer)
