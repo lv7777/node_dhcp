@@ -10,6 +10,7 @@ const util=require("./lib/util.js")
 dhcpServer.bind(67)
 
 dhcpServer.on("message",function(msgbuffer,rinfo){
+    console.log(util.getInterfaces(rinfo))
     console.log("get message "+msgbuffer)
     console.log("\n"+typeof msgbuffer)
 
