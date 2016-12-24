@@ -1,7 +1,7 @@
 const dgram=require("dgram")
-const os=require("os")
+//const os=require("os")
 
-const dhcpServer=dgram.createSocket("udp4");
+const dhcpServer=dgram.createSocket("udp4")
 const dhcpPacket=dgram.createSocket("udp4")
 
 const util=require("./lib/util.js")
@@ -18,7 +18,41 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
     //console.log( msg.mac)
 
     //DHCP packetかどうか
-    util.isDHCP(msgbuffer)
+    if(msg.isDHCP){
+        msg.option.forEach((value,key,map)=>{
+            if(key == 53){
+                console.log("53!!53!!"+value)
+                var value2=value[0];//valueはlength分の配列。type 53のlengthは1
+                switch(value2){
+                    //DHCP discover
+                    case 1:
+                        console.log("this dhcp is dhcp discover! so, I want to reply you!")
+                        break
+                    //DHCP offer
+                    case 2:
+                         console.log("???")
+                        break
+                    //DHCP request
+                    case 3:
+                        console.log("Request!! ok!!")
+                        break
+                    //DHCP ack
+                    case 5:
+                        console.log("???")
+                        break
+                    default:
+                    console.log(typeof value)
+                    console.log(value)
+
+                }
+            }else{
+                //console.log("not 53")
+                //console.log(key)
+            }
+        })
+    }else{
+        new Error("(DHCPじゃ)ないです。")
+    }
     //DHCP discoverかどうか
     
 
