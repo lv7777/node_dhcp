@@ -23,12 +23,12 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
         msg.option.forEach((value,key,map)=>{
             if(key == 53){
                 console.log("53!!53!!  "+msg.nextSettingIP)
-                var value2=value[0];//valueはlength分の配列。type 53のlengthは1
+                var value2=value[0]//valueはlength分の配列。type 53のlengthは1
                 switch(value2){
                     //DHCP discover
                     case 1:
                         console.log("this dhcp is dhcp discover! so, I want to reply you!")
-                        dhcpPacket.send(2,msg.transactionID,null,null,null);
+                        dhcpPacket.send(2,msg.transactionID,null,null,null)
                         break
                     //DHCP offer
                     case 2:
