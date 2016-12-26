@@ -48,3 +48,13 @@ DHCP discover -> DHCP offer -> DHCP request -> DHCP ack,nak
 以下に詳しい説明を書きました。
 
 [DHCPヘッダについて](./document/dhcp_header.md)
+
+# jsdoc
+
+if you want to read jsdoc, you can use follow links!
+
+[JSdoc - dhcp_server.js(index)](https://lv7777.github.io/node_dhcp/out/global.html)
+
+[JSdoc - lib/util.js(util)](https://lv7777.github.io/node_dhcp/out/util.js.html)
+
+[JSdoc - lib/dhcp_adv.js](https://lv7777.github.io/node_dhcp/out/dhcp_adv.js.html)
