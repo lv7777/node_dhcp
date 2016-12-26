@@ -32,7 +32,7 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
                         break
                     //DHCP offer
                     case 2:
-                         console.log("???")
+                        console.log("???")
                         break
                     //DHCP request
                     case 3:
@@ -59,8 +59,8 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
                         console.log("???")
                         break
                     default:
-                    console.log(typeof value)
-                    console.log(value)
+                        console.log(typeof value)
+                        console.log(value)
 
                 }
             }else{
