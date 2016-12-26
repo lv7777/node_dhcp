@@ -1,11 +1,7 @@
 
 # 自作DHCPサーバー
 
-https://img.shields.io/badge/License-MPL--2.0-blue.svg
-
-[リンクテキスト](https://www.mozilla.org/en-US/MPL/)
-
-https://camo.githubusercontent.com/bd17368606e29519599d22ad978b772122df74fc/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d504c322e302d626c75652e737667
+![https://img.shields.io/badge/License-MPL--2.0-blue.svg](https://www.mozilla.org/en-US/MPL/)
 
 * exec
 
