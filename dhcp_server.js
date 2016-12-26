@@ -10,15 +10,9 @@ const util=require("./lib/util.js")
 dhcpServer.bind(67)
 
 dhcpServer.on("message",function(msgbuffer,rinfo){
-    //console.log(util.getInterfaces(rinfo))
-    //console.log("get message "+msgbuffer)
-    //console.log("\n"+typeof msgbuffer)
-
     var msg=util.parseDHCP(msgbuffer)
     console.log(msg.opcode)
-    //console.log( msg.mac)
 
-    //DHCP packetかどうか
     if(msg.isDHCP){
         msg.option.forEach((value,key,map)=>{
             if(key == 53){
@@ -36,14 +30,6 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
                     //DHCP request
                     case 3:
                         console.log("Request!! ok!!")
-
-                        //dhcpリースの可能性も十分ありえるため、nakは出さない
-                        // if( util.validTransaction(msg.transactionID,msg.nextSettingIP) ){
-                        //     //DHCP ack
-                        // }else{
-                        //     //DHCP nak
-                        // }
-
                         if(util.isUsed(msg.nextSettingIP)){
                             //DHCP nak
                             dhcpPacket.send(6,msg.transactionID,null,null,null)
