@@ -77,7 +77,7 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
 })
 
 dhcpServer.on("error",(err)=>{
-    console.warn("error!!!!"+ err)
+    console.warn(`error!!!! ${err}`)
 })
 
 dhcpServer.on("listening",(obj)=>{
