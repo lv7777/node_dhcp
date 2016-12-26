@@ -1,7 +1,7 @@
 
 # 自作DHCPサーバー
 
-![https://img.shields.io/badge/License-MPL--2.0-blue.svg](https://www.mozilla.org/en-US/MPL/)
+[![MPL 2.0 License](https://img.shields.io/badge/License-MPL--2.0-blue.svg)](https://www.mozilla.org/en-US/MPL/)
 
 * exec
 
