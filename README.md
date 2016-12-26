@@ -34,3 +34,17 @@ dhcpが来たら/lib/util.jsのパーサーを使って来たdhcpを仕様に従
 e.g. DHCP discoverを受け取ったら、DHCP offerを返す。
 
 実際にDHCPを投げる部分は上記の./libs/dhcp_adv.jsに依存しています。
+
+# about DHCP
+
+you can read follow reference!
+
+DHCPはネットワーク下のIPアドレスを自動的に割り当てることのできるサーバーです。
+
+DHCP discover -> DHCP offer -> DHCP request -> DHCP ack,nak
+
+というのがDHCPの基本的な流れになります。
+
+以下に詳しい説明を書きました。
+
+[DHCPヘッダについて](./document/dhcp_header.md)
