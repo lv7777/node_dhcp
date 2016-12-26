@@ -22,7 +22,6 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
     if(msg.isDHCP){
         msg.option.forEach((value,key,map)=>{
             if(key == 53){
-                console.log("53!!53!!  "+msg.nextSettingIP)
                 var value2=value[0]//valueはlength分の配列。type 53のlengthは1
                 switch(value2){
                     //DHCP discover
@@ -83,5 +82,5 @@ dhcpServer.on("error",(err)=>{
 
 dhcpServer.on("listening",(obj)=>{
     const info=dhcpServer.address()
-    console.info("server listening in "+info.address + " and "+info.port+" port\n")
+    console.info(`server listening in ${info.address} and Port ${info.address}\n`)
 })
