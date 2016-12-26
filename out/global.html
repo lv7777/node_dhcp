@@ -92,6 +92,72 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="udp"><span class="type-signature">(constant) </span>udp<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    テスト用データです。dhcp discoverを投げます。
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dhcp_test.js.html">dhcp_test.js</a>, <a href="dhcp_test.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -101,11 +167,15 @@
 
     
 
-    <h4 class="name" id="parseOption"><span class="type-signature"></span>parseOption<span class="signature">(buffer, offset, obj)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    <h4 class="name" id="parseOption"><span class="type-signature"></span>parseOption<span class="signature">(buffer, offset<span class="signature-attributes">opt</span>, obj)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
 
 
+
+<div class="description">
+    可変オプションをパースして引数で渡されたオブジェクトにつけます。
+</div>
 
 
 
@@ -127,6 +197,8 @@
 
         <th>Type</th>
 
+        
+        <th>Attributes</th>
         
 
         
@@ -155,6 +227,14 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
                 <td class="default">
@@ -181,6 +261,16 @@
             
             </td>
 
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -210,6 +300,14 @@
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -259,7 +357,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="util.js.html">util.js</a>, <a href="util.js.html#line76">line 76</a>
+        <a href="util.js.html">util.js</a>, <a href="util.js.html#line78">line 78</a>
     </li></ul></dd>
     
 
@@ -312,7 +410,7 @@
 
     
 
-    <h4 class="name" id="readmac"><span class="type-signature"></span>readmac<span class="signature">(buffer, offset, num)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="readmac"><span class="type-signature"></span>readmac<span class="signature">(buffer, offset<span class="signature-attributes">opt</span>, num<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
@@ -343,6 +441,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
         <th>Default</th>
@@ -370,6 +470,14 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
                 <td class="default">
@@ -390,12 +498,22 @@
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">Number</span>
 
 
             
             </td>
 
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -419,12 +537,22 @@
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">Number</span>
 
 
             
             </td>
 
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -476,7 +604,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="util.js.html">util.js</a>, <a href="util.js.html#line52">line 52</a>
+        <a href="util.js.html">util.js</a>, <a href="util.js.html#line53">line 53</a>
     </li></ul></dd>
     
 
@@ -540,13 +668,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#parseOption">parseOption</a></li><li><a href="global.html#readmac">readmac</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#parseOption">parseOption</a></li><li><a href="global.html#readmac">readmac</a></li><li><a href="global.html#udp">udp</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat Dec 24 2016 11:35:54 GMT+0900 (東京 (標準時))
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Dec 26 2016 19:54:20 GMT+0900 (東京 (標準時))
 </footer>
 
 <script> prettyPrint(); </script>
