@@ -34,7 +34,8 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
                     //DHCP discover
                     case 1:
                         console.log("this dhcp is dhcp discover! so, I want to reply you!")
-                            dhcpPacket.send(2,msg.transactionID,null,null,dhcpServer.address().address)
+                        var ipaddr=dhcpServer.address().address
+                        dhcpPacket.send(2,msg.transactionID,null,null,ipaddr,util.getInterfaces(rinfo))
                         break
                     //DHCP offer
                     case 2:
@@ -43,12 +44,13 @@ dhcpServer.on("message",function(msgbuffer,rinfo){
                     //DHCP request
                     case 3:
                         console.log("Request!! ok!!")
+                        var ipaddr=dhcpServer.address().address
                         if(util.isUsed(msg.nextSettingIP)){
                             //DHCP nak
-                            dhcpPacket.send(6,msg.transactionID,null,null,dhcpServer.address().address)
+                            dhcpPacket.send(6,msg.transactionID,null,null,ipaddr,util.getInterfaces(rinfo))
                         }else{
                             //DHCP ack
-                            dhcpPacket.send(5,msg.transactionID,null,msg.nextSettingIP,dhcpServer.address().address)
+                            dhcpPacket.send(5,msg.transactionID,null,msg.nextSettingIP,ipaddr,util.getInterfaces(rinfo))
                         }
 
                         break
